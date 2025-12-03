@@ -30,8 +30,13 @@
                     <x-nav-link :href="route('produtos.index')" :active="request()->routeIs('produtos.*')">
                         {{ __('Produtos') }}
                     </x-nav-link>
+                    
+                    <!-- SEFAZ (ADICIONADO) -->
+                    <x-nav-link :href="route('config.sefaz')" :active="request()->routeIs('config.sefaz.*')">
+                        {{ __('SEFAZ') }}
+                    </x-nav-link>
                 </div>
-            </div> <!-- ← FECHAR AQUI a div class="flex" -->
+            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -96,6 +101,11 @@
             
             <x-responsive-nav-link :href="route('produtos.index')" :active="request()->routeIs('produtos.*')">
                 {{ __('Produtos') }}
+            </x-responsive-nav-link>
+            
+            <!-- SEFAZ para mobile (ADICIONADO) -->
+            <x-responsive-nav-link :href="route('config.sefaz')" :active="request()->routeIs('config.sefaz.*')">
+                {{ __('SEFAZ') }}
             </x-responsive-nav-link>
         </div>
 
